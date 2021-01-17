@@ -252,7 +252,7 @@ if (is_this_func_exist('php_sapi_name')) {
 if ($stack['type'] == "cli") {
     echo "Shell Finder v1.0 | Nikko Enggaliano Pratama" . PHP_EOL . "If there's no other line, then there's nothing detected in this entire directory." . PHP_EOL . str_repeat("-", 50) . PHP_EOL . PHP_EOL;
     lets_scan_this("{,.}[!.,!..]*");
-    //Saran($stack['sup'], 'cli', $stack['os_env']);
+    Saran($stack['sup'], 'cli', $stack['os_env']);
 
 } else {
 	if(isset($_GET['pdf'])){
@@ -276,11 +276,11 @@ if ($stack['type'] == "cli") {
     }else {
         if (@!empty($_GET['_'])) {
             lets_scan_this($_GET['_']);
-    		//Saran($stack['sup'], 'web', $stack['os_env']);
+    		Saran($stack['sup'], 'web', $stack['os_env']);
             //saran soon
         } else {
             lets_scan_this("{,.}[!.,!..]*");
-            //Saran($stack['sup'], 'web', $stack['os_env']);
+            Saran($stack['sup'], 'web', $stack['os_env']);
             //saran soon
         }
         
